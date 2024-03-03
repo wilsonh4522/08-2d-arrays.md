@@ -7,7 +7,7 @@
 In APCSA (AP Computer Science A) we are curretly learning about 2-D arrays in Java. This unit has so far been challenging but after some background knowldege about arrays in Java unit 6 & 7 it was easy to understand but I didn't do to well in the unit 7 exam. Throughout this writeup I will take you through some of my challenges, thinkings, and questions I got wrong on the exam. 
 
 ### Challenge #1
-One challenge I had in this unit is 
+One challenges I had in this unit is simple misunderstandings I had when learning about 2-D arrays. For example 2-D arrays are row major order so we go `[row][column]`. I keep getting confused on what row and column is and it takes me a while to get used to it. I would sometimes confuse them with each other and get something wrong. Another misunderstading would be the numbers in the row and column like `[5,3]`; I would  
 
 ### Challenge #2
 
