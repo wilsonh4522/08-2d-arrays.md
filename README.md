@@ -74,8 +74,80 @@ for (int j = 0; j < arr.length; j++)
 ```
 For this question I chose one and two but this is wrong because the whole array list has to have a length of three so if the array has a list of `bye, hello, red`, it would return true because after going through `bye` it will return true. This is wrong because the `hello` is more than four letters. The first one is correct because it goes through each item in the array to check if it has a length of 3.
 #### Challenge #3.2
+Consider the following code segment.
+```Java
+int[][] mat = new int[4][5];
+int fill = 0;        
 
+for (int[] row : mat) 
+{
+  for (int k = 0; k < row.length; k++)  
+  {
+    row[k] = fill;
+    fill++;
+  }
+}
+
+System.out.println(mat[2][1]);
+```
+What is printed as a result of executing the code segment?
+<br>0</br>
+  
+10
+  
+7
+  
+11
+  
+3
+
+<br>For this question I chose 3 but I was wrong because I didn't understand the code above. Hoever after reviewing the question after the exam, I understood it. 
+```
+0  1  2  3  4
+5  6  7  8  9
+10 11 12 13 14
+15 16 17 18 19
+```
+This is the 2-D array and mat[2][1] is equal to 11. The code inside the second for loop confused me.
 #### Challenge #3.3
+Consider the following method.
+```Java
+public String mystery(String[][] arr) 
+{
+  String output = "";
+  int len;
+
+  String s1 = arr[0][0];
+  String s2 = arr[1][1];
+
+  if (s1.length() < s2.length()) 
+  {
+    len = s1.length();
+  } 
+  else 
+  {
+    len = s2.length();
+  }
+
+  for (int k = 0; k < len; k++) 
+  {
+    output += s1.substring(k, k + 1);
+    output += s2.substring(k, k + 1);
+  }
+
+  return output;
+}
+
+public static void main(String[] args)
+{
+  String[][] words = {{"Joan", "a"},
+                      {"Sop", "Ons"}};
+  System.out.println(mystery(words));
+}
+```
+What is printed when the program is run?
+For this question I chose `Nothing is returned because an IndexOutOfBoundsException is thrown` because I thought that the `for (int k = 0; k < len; k++)` would some how go out of bounds but after the test I don't know why I thought of that. After understanding the code I know that you need to find the substring of `Joan` and `Ons` until k would equal to 3. When you do all of that you get `JOonas`.
+
 
 ### Takeaways
 * Plug in values for questions in the exams to have a better chance to get the question correct
